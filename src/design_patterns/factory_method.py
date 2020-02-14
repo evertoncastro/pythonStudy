@@ -1,3 +1,5 @@
+# Factory method uses the principle of Single Responsibility of SOLID pattern
+
 
 from __future__ import annotations
 from abc import ABC, abstractmethod
@@ -48,7 +50,7 @@ class ConcreteProduct2(Product):
 
 def client_code(creator: Creator) -> None:
 
-    print(f"Client: I'm not aware of the creator's class, but is still works. \n"
+    print(f"Client: I'm not aware of the creator's class, but it still works. \n"
           f"{creator.some_operation()}", end="")
 
 
@@ -57,5 +59,5 @@ if __name__ == "__main__":
     client_code(ConcreteCreator1())
     print("\n")
 
-    print("App: Launched with the ConcreteCreator2")
+    print("App: Launched with the ConcreteCreator2.")
     client_code(ConcreteCreator2())
